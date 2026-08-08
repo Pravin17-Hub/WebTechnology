@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Image Map</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align:center;
+            background:#f4f4f4;
+        }
+
+        img{
+            width:700px;
+            border:2px solid black;
+        }
+
+        .info{
+            margin-top:20px;
+            padding:15px;
+            width:70%;
+            margin-left:auto;
+            margin-right:auto;
+            background:white;
+            border-radius:8px;
+            box-shadow:0 0 10px gray;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Computer Image Map</h2>
+<p>Click on the Monitor, Keyboard or Mouse.</p>
+
+<img src="computer.jpg" usemap="#computerMap" alt="Computer">
+
+<map name="computerMap">
+
+    <area shape="rect"
+          coords="170,50,520,250"
+          href="#monitor"
+          alt="Monitor">
+
+    <area shape="rect"
+          coords="170,280,520,360"
+          href="#keyboard"
+          alt="Keyboard">
+
+    <area shape="circle"
+          coords="600,320,35"
+          href="#mouse"
+          alt="Mouse">
+
+</map>
+
+<div class="info" id="monitor">
+<h3>Monitor</h3>
+<p>A monitor is an output device that displays text, images and videos.</p>
+</div>
+
+<div class="info" id="keyboard">
+<h3>Keyboard</h3>
+<p>A keyboard is an input device used to enter text, numbers and commands.</p>
+</div>
+
+<div class="info" id="mouse">
+<h3>Mouse</h3>
+<p>A mouse is a pointing device used to select and interact with items on the screen.</p>
+</div>
+
+</body>
+</html>

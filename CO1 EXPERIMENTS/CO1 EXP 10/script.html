@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74baffa3, #0a068a);
+}
+
+.form-box {
+    width: 380px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgb(72, 197, 219);
+    border-radius: 12px;
+    box-shadow: 10px 15px 20px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    color: darkblue;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(177, 101, 101);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(230, 3, 3);
+}
+
+#message {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+input:focus,
+select:focus {
+    border-color: rgb(230, 0, 0);
+    outline: none;
+    box-shadow: 0 0 5px rgba(65,105,225,0.5);
+}
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Student Registration</h2>
+
+<label for="studentName">Student Name</label>
+<input type="text"
+id="studentName"
+placeholder="Enter student name">
+<label for="fatherName">Father's Name</label>
+<input type="text"
+id="fatherName"
+placeholder="Enter father's name">
+<label for="motherName">Mother's Name</label>
+<input type="text"
+id="motherName"
+placeholder="Enter mother's name">
+<label for="address">Address</label>
+<textarea id="address" placeholder="Enter your address"></textarea>
+
+<label for="registerNumber">Register Number</label>
+<input type="text"
+id="registerNumber"
+placeholder="Enter register number">
+<label for="friendsName">Friend's Name</label>
+<input type="text"
+id="friendsName"
+placeholder="Enter friend's name">
+
+<label for="department">Department</label>
+<select id="department">
+    <option value="">Select Department</option>
+    <option value="CSE">CSE</option>
+    <option value="AI">Artificial Intelligence</option>
+    <option value="ECE">ECE</option>
+</select>
+
+<button onclick="registerStudent()">
+Register
+</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+function registerStudent() {
+
+    const name =
+    document.getElementById("studentName").value;
+
+    const fatherName =
+    document.getElementById("fatherName").value;
+
+    const motherName =
+    document.getElementById("motherName").value;
+
+    const address =
+    document.getElementById("address").value;
+
+    const registerNumber =
+    document.getElementById("registerNumber").value;
+
+    const department =
+    document.getElementById("department").value;
+
+    const message =
+    document.getElementById("message");
+
+    if (
+        name === "" ||
+        registerNumber === "" ||
+        department === ""
+    ) {
+        message.textContent =
+        "Please fill in all the fields.";
+
+        message.style.color = "red";
+    } else {
+        message.textContent =
+        "Student registered successfully.";
+
+        message.style.color = "green";
+    }
+}
+</script>
+
+</body>
+</html>
