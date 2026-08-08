@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Event Registration Portal</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="brand-group">
+        <img class="logo" src="logo.png" alt="University logo">
+        <div class="brand-text">
+          <p class="university-name">Saveetha University</p>
+          <h1 class="portal-title" style="color:#1a4d8f;">University Event Registration Portal</h1>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Primary site navigation">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#catalogue-title">Events</a></li>
+          <li><a href="#registration">Register</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <button class="help-button" type="button">Help</button>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-content">
+          <span class="eyebrow">Campus events made easy.</span>
+          <h2 id="hero-heading">Be part of the next university event.</h2>
+          <p>Discover learning workshops, competitive hackathons, career training, and celebration festivals that strengthen your campus experience in a welcoming environment.</p>
+          <p class="campaign">Event Campaign: August 1 - August 30</p>
+          <a class="hero-button" href="#registration">Register Now</a>
+        </div>
+      </section>
+      <section class="catalogue" aria-labelledby="catalogue-title">
+        <div class="section-header">
+          <h2 id="catalogue-title">Event Catalogue</h2>
+          <p>Choose from four curated events designed for student growth, teamwork, and campus engagement.</p>
+        </div>
+        <div class="event-grid">
+          <article class="event-card" tabindex="0">
+            <img src="workshop.jpg" alt="Technical Workshop event image">
+            <div class="card-content">
+              <span class="status status-open">Open</span>
+              <h3>Technical Workshop</h3>
+              <p class="event-meta">Category: Technology</p>
+              <p class="event-meta">Date: August 5, 2026</p>
+              <p class="event-meta">Time: 10:00 AM - 1:00 PM</p>
+              <p class="event-meta">Venue: RB Seminar Hall</p>
+              <p class="card-description">A practical workshop introducing modern development tools and emerging software concepts for campus innovators.</p>
+              <button class="card-btn" type="button">Register</button>
+            </div>
+          </article>
+
+          <article class="event-card" tabindex="0">
+            <img src="hackathon.jpg" alt="Hackathon event image">
+            <div class="card-content">
+              <span class="status status-closed">Closed</span>
+              <h3>Hackathon</h3>
+              <p class="event-meta">Category: Competition</p>
+              <p class="event-meta">Date: August 12, 2026</p>
+              <p class="event-meta">Time: 8:00 AM - 8:00 PM</p>
+              <p class="event-meta">Venue: Scad Auditorium</p>
+              <p class="card-description">Participate in a full-day coding challenge with prizes for teamwork, creativity, and technical skill.</p>
+              <button class="card-btn" type="button">Register</button>
+            </div>
+          </article>
+
+          <article class="event-card" tabindex="0">
+            <img src="placement.png" alt="Placement Training event image">
+            <div class="card-content">
+              <span class="status status-open">Open</span>
+              <h3>Placement Training</h3>
+              <p class="event-meta">Category: Career</p>
+              <p class="event-meta">Date: August 18, 2026</p>
+              <p class="event-meta">Time: 2:00 PM - 5:00 PM</p>
+              <p class="event-meta">Venue: Sail Library</p>
+              <p class="card-description">Gain interview lessons, resume tips, and practical preparation for internship and job applications.</p>
+              <button class="card-btn" type="button">Register</button>
+            </div>
+          </article>
+
+          <article class="event-card" tabindex="0">
+            <img src="cultural.jpg" alt="Cultural Fest event image">
+            <div class="card-content">
+              <span class="status status-open">Open</span>
+              <h3>Cultural Fest</h3>
+              <p class="event-meta">Category: Community</p>
+              <p class="event-meta">Date: August 25, 2026</p>
+              <p class="event-meta">Time: 5:00 PM - 10:00 PM</p>
+              <p class="event-meta">Venue: College Ground</p>
+              <p class="card-description">Celebrate student cultures with performances, food stalls, and community showcases from across campus.</p>
+              <button class="card-btn" type="button">Register</button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="registration" id="registration" aria-labelledby="registration-heading">
+        <h2 id="registration-heading">Register for an Event</h2>
+        <p>Fill in your student details and select the event you want to attend.</p>
+        <form class="registration-form">
+          <div class="form-row">
+            <label for="student-name">Student Name</label>
+            <input type="text" id="student-name" name="student-name" placeholder="Jane Doe" required>
+          </div>
+
+          <div class="form-row">
+            <label for="register-number">Register Number</label>
+            <input type="text" id="register-number" name="register-number" placeholder="2026UX100" required>
+          </div>
+
+          <div class="form-row">
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department" placeholder="Computer Science" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Jane@gmail.com" required>
+          </div>
+
+          <div class="form-row">
+            <label for="event-choice">Select Event</label>
+            <select id="event-choice" name="event-choice" required>
+              <option value="">Choose an event</option>
+              <option value="technical-workshop">Technical Workshop</option>
+              <option value="hackathon">Hackathon</option>
+              <option value="placement-training">Placement Training</option>
+              <option value="cultural-fest">Cultural Fest</option>
+            </select>
+          </div>
+
+          <button class="submit-btn" type="submit">Submit Registration</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-block">
+          <h3>Contact Information</h3>
+          <p>Email: <a href="mailto:simats@saveetha.com">simats@saveetha.com</a></p>
+          <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+        </div>
+        <div class="footer-block">
+          <h3>Useful Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Campus Map</a></li>
+            <li><a href="#">Student Services</a></li>
+            <li><a href="#">Event Policies</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Saveetha University. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
